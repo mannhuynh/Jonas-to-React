@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.body {
+	font-family: sans-serif;
+	color: #4b09e7;
+	font-size: 24px;
+	height: 100vh;
+	width: auto;
+	text-align: center;
+	font-weight: bold;
+	display: grid;
+	grid-template-columns: 80px 250px 2fr 150px;
+	grid-template-rows: 80px 1fr;
+}
+
+nav,
+section,
+main,
+aside {
+	padding-top: 24px;
+}
+nav {
+	background-color: #68819b;
+	/* span navbar from grid 1 to the end */
+	grid-row: 1 / -1;
+}
+menu {
+	background-color: #68819b;
+	/* background-color: #add8e6; */
+	/* span menu from grid 2 to the end */
+	grid-column: 2 / -1;
+
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	padding: 0 40px;
+}
+button {
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #4b09e7;
+	border: none;
+	cursor: pointer;
+	color: white;
+	padding: 8px 12px;
+}
+button:last-child {
+	background-color: #e989b6;
+	margin-left: auto;
+	color: #4b09e7;
+	font-size: 14px;
+}
+section {
+	background-color: #add8e6;
+	padding: 40px;
+	/* overflow scroll in flex box item will shrink its children */
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.email {
+	background-color: #4b09e7;
+	color: white;
+	/* turn off auto shrink from parent */
+	flex-shrink: 0;
+	height: 72px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+}
+aside {
+	background-color: #e989b6;
+}
