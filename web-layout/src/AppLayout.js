@@ -20,11 +20,6 @@ export default function AppLayout() {
 		<div className="body">
 			<nav>Nav</nav>
 			<menu>
-				{/* <button>New</button>
-				<button>Reply</button>
-				<button>Forward</button>
-				<button>Mark Unread</button>
-				<button>Trash</button> */}
 				{menus.map((menu) => (
 					<button key={menu}> {menu}</button>
 				))}
@@ -32,7 +27,6 @@ export default function AppLayout() {
 			<section>
 				{emails.map((email) => (
 					<div key={email} className="email">
-						{" "}
 						{email}
 					</div>
 				))}
